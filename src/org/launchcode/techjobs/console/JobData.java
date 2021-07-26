@@ -84,6 +84,25 @@ public class JobData {
         return jobs;
     }
 
+   public static ArrayList<HashMap<String, String>> findByValue(String searchValue) {
+        loadData();
+
+        ArrayList<HashMap<String, String>> job = new ArrayList<>();
+        for(HashMap<String, String> row : allJobs){
+            for (String key : row.keySet()) {
+                String someValue = row.get(key);
+
+                if(row.containsKey(searchValue)) {
+                    row.get(row);
+                }
+
+            }
+
+
+
+        }
+        return allJobs;
+    }
     //0public static ArrayList<HashMap<String, String>>
     /**
      * Read in data from a CSV file and store it in a list
@@ -94,12 +113,10 @@ public class JobData {
         if (isDataLoaded) {
             return;
         }
-    public static  void findByValue() {
 
-        }
         try {
 
-            // Open the CSV file and set up pull out column header info and records
+        // Open the CSV file and set up pull out column header info and records
             Reader in = new FileReader(DATA_FILE);
             CSVParser parser = CSVFormat.RFC4180.withFirstRecordAsHeader().parse(in);
             List<CSVRecord> records = parser.getRecords();

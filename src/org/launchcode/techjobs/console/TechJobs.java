@@ -71,6 +71,7 @@ public class TechJobs {
         }
     }
 
+
     //Returns the key of the selected item from the choices Dictionary
     private static String getUserSelection(String menuHeader, HashMap<String, String> choices) {
 
@@ -111,13 +112,13 @@ public class TechJobs {
     }
 
     // Print a list of jobs
-    private static void (ArrayList<HashMap<String, String>> someJobs) {
-                        for (int i = 0; i++ < someJobs.size(); i++)
-                            for (HashMap<String, String> jobs : someJobs) {
-                                for (Map.Entry<String, String> part : jobs.entrySet()) {
-                                    System.out.println(part.getKey() + " : " + part.getValue());
+    private static void printJobs (ArrayList<HashMap<String, String>> someJobs) {
+//        for (int i = 0; i++ < someJobs.size(); i++)
+            for (HashMap<String, String> jobs : someJobs) {
+                for (Map.Entry<String, String> part : jobs.entrySet()) {
+                    System.out.println(part.getKey() + " : " + part.getValue());
                 }
-                System.out.println("****");
+                System.out.println("*****");
             }
     }
 }
